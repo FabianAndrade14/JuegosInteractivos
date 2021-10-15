@@ -1,0 +1,72 @@
+.animal-card-front {
+    background-color: white;
+    border: solid 8px green;
+}
+
+.animal-card-back {
+    background-color: white;
+    border: solid 8px green;
+}
+
+.animal-card {
+    height: 281px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.animal-image{
+    max-width: 180px;
+}
+
+.icon-image{
+    width: 150px;
+    height: 150px;
+}
+
+.score-text {
+    color: white;
+    font-family: "Comic Sans MS";
+}
+
+.animal-card-text {
+    color: black;
+    font-size: 30px;
+    font-family: "Comic Sans MS";
+}
+
+.test{
+    background-color: #0a53be;
+}
+
+.contPos{
+    position: absolute;
+    width: 1200px;
+    height: 720px;
+    background-color: black;
+}
+
+.pos1{
+    position: absolute;
+    right: 0px;
+    width: 90px;
+    height: 720px;
+    background-color: white;
+}
+
+.pos2{
+    position: absolute;
+    left: 0px;
+    width: 150px;
+    height: 720px;
+    background-color: white;
+}
+
+.posGame{
+    position: absolute;
+    height: 720px;
+    width: 1200px;
+}
+
+.banner-vertical-c3{
+    height: 1100px;
+}

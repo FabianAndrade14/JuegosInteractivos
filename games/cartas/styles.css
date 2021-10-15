@@ -1,0 +1,39 @@
+.animal-card-front {
+    background-color: white;
+    border: solid 8px green;
+}
+
+.animal-card-back {
+    background-color: white;
+    border: solid 8px green;
+}
+
+.animal-card {
+    height: 320px;
+    width: 239px;
+    cursor: pointer;
+}
+
+.animal-image{
+    max-width: 210px;
+}
+
+.icon-image{
+    width: 150px;
+    height: 150px;
+}
+
+.score-text {
+    color: white;
+    font-family: "Comic Sans MS";
+}
+
+.animal-card-text {
+    color: black;
+    font-size: 30px;
+    font-family: "Comic Sans MS";
+}
+
+.test{
+    background-color: #0a53be;
+}

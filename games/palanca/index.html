@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <title>palanca</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="script.js"/>
+    <link rel="stylesheet" href="styles.css"/>
+
+
+
+</head>
+<body class="is-preload" onload="Cambio()">
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+        <a href="../../">
+            <img src="../../images/escudo-1.ico" alt="..." width="75px">
+        </a>
+    </div>
+</nav>
+<div class="container">
+    <div class="banner-vertical-c2 p-3">
+        <h1 class="section-tittle">sube y baja la palanca para obtener nuevos animales, selecciona el animal
+            correcto.</h1>
+        <br>
+        <section id="main" class="wrapper">
+
+          <div id="Puntaje" class="">
+              <h1 class="section-tittle">puntaje : 0</h1>
+
+          </div>
+
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 text-center">
+                        <div class="" id="img1"></div>
+                    </div>
+                    <div class="col-4 text-center">
+                        <div class="" id="img2"></div>
+                    </div>
+                    <div class="col-4 text-center">
+                        <div class="" id="img3"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8 text-center">
+                        <h1>da click <h1 id="Txtanimal"></h1></h1>
+                    </div>
+                    <div class="col-4" style="font-size: 9px;">
+                  <span class="switch" id="switchON" onchange="Cambio()" value="1">
+                  <span class="switch-border1">
+                  <span class="switch-border2">
+                    <input id="switch1" type="checkbox" checked/>
+                    <label for="switch1"></label>
+                    <span class="switch-top"></span>
+                    <span class="switch-shadow"></span>
+                    <span class="switch-handle"></span>
+                    <span class="switch-handle-left"></span>
+                    <span class="switch-handle-right"></span>
+                    <span class="switch-handle-top"></span>
+                    <span class="switch-handle-bottom"></span>
+                    <span class="switch-handle-base"></span>
+                    <span class="switch-led switch-led-green">
+                      <span class="switch-led-border">
+                        <span class="switch-led-light">
+                          <span class="switch-led-glow"></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="switch-led switch-led-red">
+                      <span class="switch-led-border">
+                        <span class="switch-led-light">
+                          <span class="switch-led-glow"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  </span>
+                  </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="script.js"></script>
+<script src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/bootstrap.bundle.min.js"></script>
+
+<!-- Modal -->
+<div class="modal fade" id="Modal_Puntaje" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body CuerpoLogin" id="modalBody">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Rompecabezas</title>
+    <!--[if lt IE 9]><script type="text/javascript" src="js/bin/flashcanvas.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/modal.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/buttons.css" type="text/css" charset="utf-8" />
+
+</head>
+<body>
+<div class="container">
+
+  <div id="canvas-wrap">
+      <canvas id="canvas"></canvas>
+      <canvas class="hide" id="image"></canvas>
+      <canvas class="hide" id="image-preview"></canvas>
+  </div>
+
+  <!-- GAME OPTIONS -->
+  <div id="game-options">
+  <ul>
+      <li><b id="clock" class="button">00:00:00</b></li>
+      <li><a href="#" id="SHOW_EDGE" class="button left" title="Show edge pieces only">Borde</a></li>
+      <li><a href="#" id="SHOW_MIDDLE" class="button middle" title="Show middle pieces only">Mitad</a></li>
+      <li><a href="#" id="SHOW_ALL" class="button right" title="Show all pieces">Todo</a></li>
+      <li><a href="#" id="JIGSAW_SHUFFLE" class="button left" title="Shuffle">Barajar</a></li>
+      <li><a href="#" id="SHOW_PREVIEW" class="button middle" title="Preview">Avance</a></li>
+      <li><a href="#" id="SHOW_HELP" class="button help right" title="Help">Ayuda</a></li>
+      <!-- END INSERT CUSTOM BUTTONS -->
+      <li>
+          <div class="styled-select">
+              <select id="set-parts" selected-index="8">
+              </select>
+          </div>
+      </li>
+      <!-- Insert custom buttons here -->
+      <li id="create"><a href="#" class="button add" id="SHOW_FILEPICKER" title="Create puzzle" >Crear rompecabezas</a></li>
+  </ul>
+  <br class="clear"/>
+  </div>
+
+  <!-- MODAL WINDOW -->
+  <div class="hide" id="overlay"></div>
+  <div id="modal-window" class="hide">
+      <div id="modal-window-msg"></div>
+      <a href="#" id="modal-window-close" class="button">Cerrar</a>
+  </div>
+
+  <!-- CONGRATULATION -->
+  <div id="congrat" class="hide">
+      <h1>Felicitaciones!</h1>
+      <h2>Lo resolviste en</h2>
+      <h3><span id="time"></span></h3>
+      <form method="post" class="hide" action="score.php" target="save-score" onsubmit="jigsaw.UI.close_lightbox();">
+          <label>
+          Tu nombre: <input type="text" name="name" />
+          </label>
+          <input type="submit" value="Save score" />
+          <input type="hidden" id="time-input" name="time"/>
+      </form>
+  </div>
+
+  <!-- CREATE PUZZLE -->
+  <div class="hide" id="create-puzzle">
+      <h1>Escoga una imagen</h1>
+      <form id="image-form" id="add-image-form">
+          <input type="file" id="image-input">
+          <p id="image-error">No es una imagen</p>
+          <p id="dnd"><i>O arrastre uno desde su computadora</i></p>
+      </form>
+  </div>
+
+  <!-- HELP -->
+  <div id="help" class="hide">
+      <h2>Como jugar</h2>
+      <ul>
+          <li>Cambia el número de piezas con el selector en la parte superior.<br/>
+              <img src="images/selector.png"/>
+          </li>
+
+          <li>Utilice las flechas izquierda / derecha o haga clic con el botón derecho del ratón para rotar una pieza.</li>
+
+          <li>Alternar entre las piezas del borde o del medio:<br>
+              <img src="images/toggle.png"/>
+          </li>
+      </ul>
+
+      <h3>Buena suerte.</h3>
+  </div>
+
+  <form class="hide" method="post" id="redirect-form">
+      <input type="text" name="time" id="t" />
+      <input type="text" name="parts" id="p" />
+  </form>
+  <iframe class="hide" src="about:blank" id="save-score" name="save-score"></iframe>
+  
+</div>
+<!-- SCRIPTS ROMPECABEZAS -->
+<script src="js/sound.js"></script>
+<script src="js/event-emiter.min.js"></script>
+<script src="js/canvas-event.min.js"></script>
+<script src="js/canvas-puzzle.min.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="js/canvas-puzzle.ie.min.js"></script><![endif]-->
+<script>
+;(function() {
+    var sound = new game.Sound('sound/click', 10);
+    var jsaw = new jigsaw.Jigsaw({
+        defaultImage: "images/puzzle/fondo3.png",
+        piecesNumberTmpl: "%d Piezas",
+        numberOfPieces: [2,4,10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+        defaultPieces: 4
+    });
+
+    jsaw.eventBus.on(jigsaw.Events.PIECES_CONNECTED, function() {
+        sound.play();
+    });
+
+    if (jigsaw.GET["image"]) { jsaw.set_image(jigsaw.GET["image"]); }
+}());
+</script>
+</body>
+</html>

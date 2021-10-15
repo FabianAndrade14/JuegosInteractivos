@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Playtime;
+    src: url(../fonts/Delfino.otf);
+}
+
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url(../fonts/Delfino.ttf);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #fcfcfc;
+    background-image: radial-gradient(circle at 100% 150%, #fcfcfc 24%, white 24%, white 28%, #fcfcfc 28%, #fcfcfc 36%, white 36%, white 40%, transparent 40%, transparent),
+    radial-gradient(circle at 0 150%, #fcfcfc 24%, white 24%, white 28%, #fcfcfc 28%, #fcfcfc 36%, white 36%, white 40%, transparent 40%, transparent),
+    radial-gradient(circle at 50% 100%, white 10%, #fcfcfc 10%, #fcfcfc 23%, white 23%, white 30%, #fcfcfc 30%, #fcfcfc 43%, white 43%, white 50%, #fcfcfc 50%, #fcfcfc 63%, white 63%, white 71%, transparent 71%, transparent),
+    radial-gradient(circle at 100% 50%, white 5%, #fcfcfc 5%, #fcfcfc 15%, white 15%, white 20%, #fcfcfc 20%, #fcfcfc 29%, white 29%, white 34%, #fcfcfc 34%, #fcfcfc 44%, white 44%, white 49%, transparent 49%, transparent),
+    radial-gradient(circle at 0 50%, white 5%, #fcfcfc 5%, #fcfcfc 15%, white 15%, white 20%, #fcfcfc 20%, #fcfcfc 29%, white 29%, white 34%, #fcfcfc 34%, #fcfcfc 44%, white 44%, white 49%, transparent 49%, transparent);
+    background-size: 100px 50px;
+}
+
+.banner-vertical-c1 {
+    background-color: #0fc9e7;
+    background-image: linear-gradient(135deg, #fff 50%, transparent 50%), linear-gradient(225deg, #fff 50%, transparent 50%), linear-gradient(45deg, #fff 50%, transparent 50%), linear-gradient(-45deg, #fff 50%, transparent 50%);
+    background-position: top left, top left, bottom left, bottom left;
+    background-size: 12px 12px;
+    background-repeat: repeat-x;
+}
+
+.banner-vertical-c2 {
+    background-color: #3186b2;
+    background-image: linear-gradient(135deg, #fff 50%, transparent 50%), linear-gradient(225deg, #fff 50%, transparent 50%), linear-gradient(45deg, #fff 50%, transparent 50%), linear-gradient(-45deg, #fff 50%, transparent 50%);
+    background-position: top left, top left, bottom left, bottom left;
+    background-size: 12px 12px;
+    background-repeat: repeat-x;
+}
+
+.banner-vertical-c3 {
+    background-color: #4756ca;
+    background-image: linear-gradient(135deg, #fff 50%, transparent 50%), linear-gradient(225deg, #fff 50%, transparent 50%), linear-gradient(45deg, #fff 50%, transparent 50%), linear-gradient(-45deg, #fff 50%, transparent 50%);
+    background-position: top left, top left, bottom left, bottom left;
+    background-size: 12px 12px;
+    background-repeat: repeat-x;
+}
+
+.card-color {
+    background-color: #f05945;
+}
+
+
+.section-tittle {
+    font-family: Playtime;
+    font-size: 6em;
+}
+
+.section-tittle-2 {
+    font-family: "Comic Sans MS";
+    font-size: 4em;
+}

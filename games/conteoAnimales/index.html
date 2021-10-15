@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="juego1.css"/>
+    <link rel="stylesheet" href="animate.min.css"/>
+    <noscript>
+        <link rel="stylesheet" href="../../assets/css/noscript.css"/>
+    </noscript>
+    <title>conteo de animales</title>
+</head>
+
+<body>
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+        <a href="../../">
+            <img src="../../images/escudo-1.ico" alt="..." width="75px">
+        </a>
+    </div>
+</nav>
+<div class="container">
+    <div class="banner-vertical-c1 p-3">
+
+        <div id="wrapper">
+
+            <!-- Main -->
+            <section id="main" class="wrapper">
+                <div class="inner">
+                    <h1 class="section-tittle"> cuenta la cantidad de animales y selecciona el número correcto. </h1>
+
+                    <div id="Puntaje" class="section-tittle">puntaje : 0</div>
+
+                    <section>
+
+
+                        <div id="TablaJuego" class="CuerpoLogin ">
+                            <img class="imgRedonda animate__animated animate__backInDown animate__delay-1s"
+                                 src="../../images/animales/castor.png">
+                            <img class="imgRedonda	animate__animated animate__backInDown animate__delay-2s"
+                                 src="../../images/animales/castor.png">
+                            <img class="imgRedonda animate__animated animate__backInDown animate__delay-3s"
+                                 src="../../images/animales/castor.png">
+                            <p class="AnimacionAnimales">
+                                <img class="imgRedonda animate__animated animate__backInDown animate__delay-3s animate__repeat-2"
+                                     src="../../images/animales/cocodrilo.png">
+                                <img class="imgRedonda animate__animated animate__backInDown animate__delay-2s animate__repeat-2"
+                                     src="../../images/animales/cocodrilo.png">
+                                <img class="imgRedonda animate__animated animate__backInDown animate__delay-1s animate__repeat-2"
+                                     src="../../images/animales/cocodrilo.png">
+                            </p>
+
+                            <ul class="actions CuerpoLogin">
+                                <li><a class="button" onclick="Jugar()">Jugar</a></li>
+                            </ul>
+
+                        </div>
+
+
+                    </section>
+
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Scripts -->
+
+<script src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/bootstrap.bundle.min.js"></script>
+<script src="Juego1.js"></script>
+
+
+<!-- Modal -->
+<div class="modal fade" id="Modal_Puntaje" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Conteo de animales</h5>
+
+            </div>
+            <div class="modal-body CuerpoLogin" id="modalBody">
+                ...
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
